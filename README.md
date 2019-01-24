@@ -1,5 +1,5 @@
 # Wild Tiger Thai
-###Restaurant and Bar
+### Restaurant and Bar
 ###### a case study in web development
 
 ## TODO
