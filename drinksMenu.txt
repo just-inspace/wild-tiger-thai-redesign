@@ -1,0 +1,129 @@
+menu: [
+    {
+        heading: "DRINKS",
+        items: [
+            {
+                name: "Soda",
+                description: "free refills 2"
+            },
+            {
+                name: "Iced Tea",
+                description: "2.50"
+            },
+            {
+                name: "Thai Iced Tea",
+                description: "3"
+            },
+            {
+                name: "Fresh Lime Juice",
+                description: "with soda 3"
+            },
+            {
+                name: "Mango Juice",
+                description: "3"
+            },
+            {
+                name: "Coconut Juice",
+                description: "3"
+            },
+            {
+                name: "Orange Juice",
+                description: "3"
+            },
+            {
+                name: "Sparkling Water",
+                description: "3"
+            },
+            {
+                name: "Thai Iced Coffee",
+                description: "3"
+            },
+            {
+                name: "Hot Tea Pot",
+                description: "4"
+            },
+            {
+                name: "Hot Tea Cup",
+                description: "2"
+            }
+        ]
+    },
+    {
+        heading: "BOTTLED BEERS",
+        items: [
+            {
+                name: "Domestic",
+                description: "bud light / coors light 3.50"
+            },
+            {
+                name: "Imported",
+                description: "singha, tsingtao, sapporo, tiger, heineken, corona 4.50"
+            }
+        ]
+    },
+    {
+        heading: "DRAFT BEERS",
+        subheadings: [
+            "Ask For Our Current Drafts"
+        ],
+        items: []
+    },
+    {
+        heading: "HOUSE WINE",
+        subheadings: [
+            "All House Wines 6"
+        ]
+        items: [
+            {
+                name: "Chardonnay",
+                description: ""
+            },
+            {
+                name: "Cabernet Sauvignon",
+                description: ""
+            },
+            {
+                name: "Merlot",
+                description: ""
+            },
+            {
+                name: "Riesling",
+                description: ""
+            }
+        ]
+    },
+    {
+        heading: "WHITE WINE",
+        items: [
+            {
+                name: "Kendall Jackson",
+                description: "chardonnay 8/30"
+            },
+            {
+                name: "Duck Pond",
+                description: "pinot gris 7/26"
+            },
+            {
+                name: "Chateau St. Michelle",
+                description: "riesling 7/26"
+            },
+            {
+                name: "House",
+                description: "pinot grigio 6/22"
+            }
+        ]
+    },
+    {
+        heading: "RED WINE",
+        items: [
+            {
+                name: "14 Hands",
+                description: "cabernet sauvignon 7/26
+            },
+            {
+                name: "Kendall Jackson",
+                description: "pinot noir 8/30"
+            }
+        ]
+    }
+]
