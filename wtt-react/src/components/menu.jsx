@@ -1,19 +1,13 @@
 import React, { Component } from "react";
+import MenuItems from './menuItems';
+
 class Menu extends Component {
 	state = {};
 
-	renderMenu = () => {
-		return (
-			<p>
-				{this.props.menu.map(section => {
-					console.log(section);
-				})}
-			</p>
-		);
-	};
-
 	render() {
-		return <div id="menu">{this.renderMenu()}</div>;
+		return ( <div id="menu">
+			{this.props.menu.map((section, index) => <MenuItems key={index+"items"} index={index} items={section.items} header={section.header}/>)}
+		</div>);
 	}
 }
 
