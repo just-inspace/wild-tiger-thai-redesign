@@ -1,18 +1,80 @@
+/**
+  * GLOBAL DEFAULTS
+**/
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background-color: #02020B;
+	color:#ECE4B7;
+}
+
 .App {
 	text-align: center;
 }
 
+/**
+  * NAVIGATION SECTION
+**/
 #topnav {
 	position: fixed;
 	height: 50px;
+	width:100%;
+	background-color:#97BA27;
 }
 
+#pagelinks {
+	display:flex;
+	justify-content:space-evenly;
+	width:100%;
+}
+
+#pagelinks a {
+	height:50px;
+	width:100%;
+	display:block;
+	background-color:#97BA27;
+	text-decoration:none;
+}
+#pagelinks a:hover {
+	text-decoration:none;
+}
+
+#homeSection,
+#contactSection,
+#menuSection {
+	padding-top:60px;
+}
 #homeSection {
 	min-height: 100vh;
 }
 
+#contactSection {
+	min-height: 100vh;
+}
+
+/**
+  * MENU GRID AND CONTENT SECTION
+**/
 #menuSection {
 	min-height: 100vh;
-	background: black;
-	color: white;
+	display:grid;
+	grid-template-columns: 10% 80% 10%;
+	grid-template-rows:50px auto;
+}
+
+#menuButtons {
+	grid-row-start:1;
+	grid-row-end:2;
+	grid-column-start:2;
+	grid-column-end:3;
+}
+
+#menu {
+	grid-row-start:2;
+	grid-row-end:auto;
+	grid-column-start:2;
+	grid-column-end:3;
 }
