@@ -1,14 +1,20 @@
-import React, { Component } from "react";
-import MenuItems from './menuItems';
+import React from "react";
 
-class Menu extends Component {
-	state = {};
-
-	render() {
-		return ( <div id="menu">
-			{this.props.menu.map((section, index) => <MenuItems key={index+"items"} index={index} items={section.items} header={section.header}/>)}
-		</div>);
-	}
+export default function Menu(props) {
+	return (
+		<div id="menu">
+			{Object.values(props.menu).map((el, index) => (
+				<React.Fragment key={index}>
+					<h1>{el.header}</h1>
+					<h2>{el.subheading}</h2>
+					{el.items.map((sub_el, i) => (
+						<React.Fragment key={i}>
+							<h3>{sub_el.name}</h3>
+							<p>{sub_el.description}</p>
+						</React.Fragment>
+					))}
+				</React.Fragment>
+			))}
+		</div>
+	);
 }
-
-export default Menu;

@@ -95,7 +95,7 @@ class MenuSection extends Component {
 			},
 			{
 				header: "happy",
-				subheading: "buy somethin will ya",
+				subheading: "buy somethin else",
 				items: [
 					{
 						name: "Egg rolls",
@@ -111,17 +111,19 @@ class MenuSection extends Component {
 		activeMenu: "foodMenu"
 	};
 
-
 	// handlers
-	handleClick = (e) => {
-		this.setState({activeMenu: e.target.value});
-	}
+	handleClick = e => {
+		this.setState({ activeMenu: e.target.value });
+	};
 
 	render() {
 		return (
 			<div id="menuSection">
-				<MenuNav click={this.handleClick}/>
-				<Menu menu={this.state[this.state.activeMenu]} />
+				<MenuNav click={this.handleClick} />
+				<Menu
+					menu={this.state[this.state.activeMenu]}
+					value={this.state.activeMenu}
+				/>
 			</div>
 		);
 	}
