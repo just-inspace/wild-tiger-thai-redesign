@@ -1,11 +1,20 @@
 import React, { Component } from "react";
+import Hamburger from "./hamburger";
+import PageLinks from "./pageLinks";
+
 let scrollToElement = require("scroll-to-element");
 
 class TopBar extends Component {
-	state = {};
-	handleNavigationMenu = () => {};
+	state = {
+		show: false
+	};
+
+	handleResponsiveNavClick = () => {
+		this.setState({ show: !this.state.show });
+	};
 
 	handleNavigation = e => {
+		this.props.mobile && this.handleResponsiveNavClick();
 		scrollToElement(e.target.value, {
 			offset: 0,
 			ease: "in-quad",
@@ -16,29 +25,22 @@ class TopBar extends Component {
 	render() {
 		return (
 			<div id="topnav">
-				<a href="#home" onClick={this.handleNavigationMenu}>
-					<i className="fa fa-bars" aria-hidden="true" />
-				</a>
-				<div id="pagelinks">
-					<button
-						onClick={this.handleNavigation}
-						value="#homeSection"
-					>
-						Home
-					</button>
-					<button
-						onClick={this.handleNavigation}
-						value="#menuSection"
-					>
-						Menu
-					</button>
-					<button
-						onClick={this.handleNavigation}
-						value="#contactSection"
-					>
-						Contact
-					</button>
-				</div>
+				{this.props.mobile && (
+					<Hamburger click={this.handleResponsiveNavClick} />
+				)}
+				{this.props.mobile ? (
+					<PageLinks
+						click={this.handleNavigation}
+						mobile={true}
+						show={this.state.show}
+					/>
+				) : (
+					<PageLinks
+						click={this.handleNavigation}
+						mobile={false}
+						show={true}
+					/>
+				)}
 			</div>
 		);
 	}
