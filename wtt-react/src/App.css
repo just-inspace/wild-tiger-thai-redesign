@@ -61,23 +61,25 @@ button {
 	height: 60px;
 	width: 100%;
 	background-color: #97ba27;
+	z-index: 9999;
 }
 
 #pagelinks {
 	display: flex;
 	justify-content: space-evenly;
-	width: 100%;
+	align-content: center;
+	align-items: center;
+	height: 100%;
 }
 
-#pagelinks a {
-	height: 50px;
-	width: 100%;
-	display: block;
+#pagelinks button {
 	background-color: #97ba27;
+	color: #02020b;
+	font-size: 25px;
 	text-decoration: none;
-}
-#pagelinks a:hover {
-	text-decoration: none;
+	line-height: 25px;
+	width: 100%;
+	align-self: stretch;
 }
 
 #homeSection,
@@ -86,20 +88,37 @@ button {
 	padding-top: 60px;
 }
 
-#homeWrapper {
-	min-height: 100vh;
-	background-image: url(./public/images/large-restaurant.jpg);
+/**
+  * HOME SECTION STYLES
+**/
+#homeSection {
+	height: 100vh;
+	background: linear-gradient(
+			0deg,
+			rgba(200, 200, 200, 0.2),
+			rgba(200, 200, 200, 0.2)
+		),
+		url(./public/images/large-restaurant.jpg);
 	background-size: cover;
 	background-position: center;
-	opacity:0.5;
 }
-#homeSection {
-	width:100vw;
-	height:100vh;
-	background-color:rgba(0,0,0, 1);
+
+#callout1,
+#callout2 {
+	font-size: 24px;
+	font-style: italic;
+	max-width: 260px;
+	text-align: left;
+	position: absolute;
 }
-#homeWrapper * {
-	opacity: 1 !important;
+
+#callout1 {
+	top: 200px;
+	left: 10px;
+}
+#callout2 {
+	bottom: 200px;
+	right: 10px;
 }
 #contactSection {
 	min-height: 100vh;
@@ -136,7 +155,9 @@ button {
 	font-weight: bold;
 	line-height: 24px;
 }
-
+.menuButton:hover {
+	cursor: pointer;
+}
 #menu {
 	grid-row-start: 2;
 	grid-row-end: auto;
@@ -150,6 +171,14 @@ button {
 	font-size: 24px;
 	font-style: italic;
 }
+#menu h1::after {
+	content: "";
+	width: 100px;
+	border: 3px solid #9a1e04;
+	display: block;
+	margin: 20px auto;
+}
+
 #menu h2 {
 	font-size: 16px;
 }

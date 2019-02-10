@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 class MenuNav extends Component {
 	state = {};
 	render() {
@@ -15,7 +16,11 @@ class MenuNav extends Component {
 				>
 					Happy Hour
 				</button>
-				<button className="menuButton" value="drinksMenu" onClick={click}>
+				<button
+					className="menuButton"
+					value="drinksMenu"
+					onClick={click}
+				>
 					Drinks
 				</button>
 			</div>
