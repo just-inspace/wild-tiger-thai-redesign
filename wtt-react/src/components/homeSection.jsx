@@ -6,6 +6,7 @@ class HomeSection extends Component {
 	render() {
 		return (
 			<div id="homeSection">
+				<div id="homeWrapper">
 				<Spring
 					from={{ opacity: 0, top: 100, position: "relative" }}
 					to={{ opacity: 1, top: 0, position: "inherit" }}
@@ -22,6 +23,7 @@ class HomeSection extends Component {
 					)}
 				</Spring>
 				<div id="homeimageplaceholder" />
+				</div>
 			</div>
 		);
 	}

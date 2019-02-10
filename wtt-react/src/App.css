@@ -85,10 +85,22 @@ button {
 #menuSection {
 	padding-top: 60px;
 }
-#homeSection {
-	min-height: 100vh;
-}
 
+#homeWrapper {
+	min-height: 100vh;
+	background-image: url(./public/images/large-restaurant.jpg);
+	background-size: cover;
+	background-position: center;
+	opacity:0.5;
+}
+#homeSection {
+	width:100vw;
+	height:100vh;
+	background-color:rgba(0,0,0, 1);
+}
+#homeWrapper * {
+	opacity: 1 !important;
+}
 #contactSection {
 	min-height: 100vh;
 }
