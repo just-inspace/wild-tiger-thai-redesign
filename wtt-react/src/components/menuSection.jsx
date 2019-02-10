@@ -11,21 +11,28 @@ class MenuSection extends Component {
 		foodMenu: foodMenu,
 		drinksMenu: drinksMenu,
 		happyHourMenu: happyHourMenu,
-		activeMenu: "foodMenu"
+		activeMenu: "foodMenu",
+		toggle: true
 	};
 
 	// handlers
 	handleClick = e => {
-		this.setState({ activeMenu: e.target.value });
+		if (this.state.activeMenu !== e.target.value) {
+			const menu = e.target.value;
+			setTimeout(() => this.toggleTransition(menu), 250);
+			this.setState({ toggle: false });
+		}
 	};
-
+	toggleTransition = menu => {
+		this.setState({ activeMenu: menu, toggle: true });
+	};
 	render() {
 		return (
 			<div id="menuSection">
 				<MenuNav click={this.handleClick} />
 				<Menu
 					menu={this.state[this.state.activeMenu]}
-					value={this.state.activeMenu}
+					toggle={this.state.toggle}
 				/>
 			</div>
 		);

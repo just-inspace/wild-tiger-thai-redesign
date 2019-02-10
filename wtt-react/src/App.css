@@ -2,17 +2,55 @@
   * GLOBAL DEFAULTS
 **/
 * {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-	background-color: #02020B;
-	color:#ECE4B7;
+	background-color: #02020b;
+	color: #ece4b7;
 }
 
 .App {
 	text-align: center;
+}
+button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+
+	background: transparent;
+
+	/* inherit font & color from ancestor */
+	color: inherit;
+	font: inherit;
+
+	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+	line-height: normal;
+
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+button {
+	border: 0;
+	padding: 0;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 /**
@@ -20,32 +58,32 @@ body {
 **/
 #topnav {
 	position: fixed;
-	height: 50px;
-	width:100%;
-	background-color:#97BA27;
+	height: 60px;
+	width: 100%;
+	background-color: #97ba27;
 }
 
 #pagelinks {
-	display:flex;
-	justify-content:space-evenly;
-	width:100%;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
 }
 
 #pagelinks a {
-	height:50px;
-	width:100%;
-	display:block;
-	background-color:#97BA27;
-	text-decoration:none;
+	height: 50px;
+	width: 100%;
+	display: block;
+	background-color: #97ba27;
+	text-decoration: none;
 }
 #pagelinks a:hover {
-	text-decoration:none;
+	text-decoration: none;
 }
 
 #homeSection,
 #contactSection,
 #menuSection {
-	padding-top:60px;
+	padding-top: 60px;
 }
 #homeSection {
 	min-height: 100vh;
@@ -60,21 +98,53 @@ body {
 **/
 #menuSection {
 	min-height: 100vh;
-	display:grid;
+	display: grid;
 	grid-template-columns: 10% 80% 10%;
-	grid-template-rows:50px auto;
+	grid-template-rows: 71px auto;
 }
 
 #menuButtons {
-	grid-row-start:1;
-	grid-row-end:2;
-	grid-column-start:2;
-	grid-column-end:3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	background-color: #3c4747;
+	color: #e55811;
+
+	display: flex;
+	align-content: stretch;
+	justify-content: space-evenly;
+}
+
+.menuButton {
+	justify-self: stretch;
+	align-self: stretch;
+	width: 100%;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 24px;
 }
 
 #menu {
-	grid-row-start:2;
-	grid-row-end:auto;
-	grid-column-start:2;
-	grid-column-end:3;
+	grid-row-start: 2;
+	grid-row-end: auto;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+#menu h1 {
+	margin-top: 20px;
+	color: #9a1e04;
+	font-size: 24px;
+	font-style: italic;
+}
+#menu h2 {
+	font-size: 16px;
+}
+#menu h3 {
+	margin-top: 20px;
+	font-size: 20px;
+}
+#menu p {
+	font-size: 14px;
 }
