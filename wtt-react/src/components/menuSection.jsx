@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Menu from "./menu";
 import MenuNav from "./menuNav";
+import ImageGroup from "./imageGroup";
 
 import foodMenu from "./data/foodMenu.json";
 import drinksMenu from "./data/drinksMenu.json";
@@ -34,6 +35,8 @@ class MenuSection extends Component {
 					menu={this.state[this.state.activeMenu]}
 					toggle={this.state.toggle}
 				/>
+				<ImageGroup />
+				<ImageGroup />
 			</div>
 		);
 	}
