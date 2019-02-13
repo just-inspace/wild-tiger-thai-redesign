@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Menu from "./menu";
 import MenuNav from "./menuNav";
 import ImageGroup from "./imageGroup";
+import Grid from "./grid";
 
 import foodMenu from "./data/foodMenu.json";
 import drinksMenu from "./data/drinksMenu.json";
@@ -27,16 +28,26 @@ class MenuSection extends Component {
 	toggleTransition = menu => {
 		this.setState({ activeMenu: menu, toggle: true });
 	};
+
+	menuRef = React.createRef();
+
 	render() {
+		console.log(this.refs);
 		return (
 			<div id="menuSection">
 				<MenuNav click={this.handleClick} />
-				<Menu
-					menu={this.state[this.state.activeMenu]}
-					toggle={this.state.toggle}
-				/>
-				<ImageGroup />
-				<ImageGroup />
+				<Grid
+					columns="100px auto 100px"
+					rows="auto"
+					justifyItems="center"
+				>
+					<ImageGroup side="img-left-sm" />
+					<Menu
+						menu={this.state[this.state.activeMenu]}
+						toggle={this.state.toggle}
+					/>
+					<ImageGroup side="img-right-sm" />
+				</Grid>
 			</div>
 		);
 	}

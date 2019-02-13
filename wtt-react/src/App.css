@@ -9,6 +9,7 @@
 body {
 	background-color: #02020b;
 	color: #ece4b7;
+	overflow-x: hidden;
 }
 
 .App {
@@ -139,12 +140,12 @@ button {
 }
 
 #callout1 {
-	top: 150px;
-	left: 75px;
+	top: 25%;
+	left: 25%;
 }
 #callout2 {
-	bottom: 150px;
-	right: 75px;
+	bottom: 10%;
+	right: 25%;
 }
 #contactSection {
 	min-height: 100vh;
@@ -155,27 +156,20 @@ button {
 **/
 #menuSection {
 	min-height: 100vh;
-	display: grid;
-	grid-template-columns: 10% 80% 10%;
-	grid-template-rows: 71px auto;
 }
 
 #menuButtons {
-	grid-row-start: 1;
-	grid-row-end: 2;
-	grid-column-start: 1;
-	grid-column-end: 4;
 	background-color: #3c4747;
 	color: #e55811;
 
 	display: flex;
+	width: 100%;
+	height: 71px;
 	align-content: stretch;
 	justify-content: space-evenly;
 }
 
 .menuButton {
-	justify-self: stretch;
-	align-self: stretch;
 	width: 100%;
 	font-size: 24px;
 	font-weight: bold;
@@ -183,12 +177,6 @@ button {
 }
 .menuButton:hover {
 	cursor: pointer;
-}
-#menu {
-	grid-row-start: 2;
-	grid-row-end: auto;
-	grid-column-start: 2;
-	grid-column-end: 3;
 }
 
 #menu h1 {
@@ -214,4 +202,10 @@ button {
 }
 #menu p {
 	font-size: 14px;
+}
+
+.sideImages {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }

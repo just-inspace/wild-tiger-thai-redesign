@@ -8,8 +8,6 @@ import noodle2 from "./public/images/noodle2.jpg";
 import wt1 from "./public/images/wt1.jpg";
 import wt2 from "./public/images/wt2.jpg";
 import dessert1 from "./public/images/dessert1.jpg";
-import drinks1 from "./public/images/drinks1.jpg";
-import storefront from "./public/images/wtt-storefront.png";
 
 export const images = [
 	thai1,
@@ -21,7 +19,5 @@ export const images = [
 	noodle2,
 	wt1,
 	wt2,
-	dessert1,
-	drinks1,
-	storefront
+	dessert1
 ];
