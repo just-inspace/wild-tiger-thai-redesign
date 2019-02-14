@@ -56,7 +56,6 @@ class ContactSection extends Component {
 					this.mobileRender()
 			: 	
 					this.desktopRender()}
-			}
 			</div>)
 	}
 }
