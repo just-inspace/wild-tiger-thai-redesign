@@ -43,7 +43,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<TopBar mobile={mobile} />
-				<HomeSection />
+				<HomeSection mobile={mobile}/>
 				<MenuSection animate={true} mobile={mobile} />
 				<ContactSection mobile={mobile} />
 			</div>

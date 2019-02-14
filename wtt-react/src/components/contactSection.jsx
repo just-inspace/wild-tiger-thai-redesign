@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import ImageGroup from "./imageGroup";
+import Grid from "./grid";
 
 class ContactSection extends Component {
 	state = {};
 	mobileRender = () => {
 		return (
-			<div id="contactSection">
+			<Grid 
+			columns="100%"
+			rows="auto">
 				<div className="hours">
 					<p>HOURS</p>
 					<p>MON-THUR / 11-9</p>
@@ -19,13 +22,15 @@ class ContactSection extends Component {
 					<p>VANCOUVER, WA 98683</p>
 					<p>(360) 882-8887</p>
 				</div>
-			</div>
+			</Grid>
 		);
 	};
 
 	desktopRender = () => {
 		return (
-			<div id="contactSection">
+			<Grid
+					columns="25% 25% 25% 25%" 
+					rows="30% 30% 30%">
 				<ImageGroup start={0} end={3} side="img-left-lg" />
 				<ImageGroup start={0} end={3} side="img-right-lg" />
 				<div className="hours hoursDesktop">
@@ -40,12 +45,19 @@ class ContactSection extends Component {
 					<p>VANCOUVER, WA 98683</p>
 					<p>(360) 882-8887</p>
 				</div>
-			</div>
+				</Grid>
 		);
 	};
 
 	render() {
-		return this.props.mobile ? this.mobileRender() : this.desktopRender();
+		return (
+			<div id="contactSection">
+			{this.props.mobile ? 					
+					this.mobileRender()
+			: 	
+					this.desktopRender()}
+			}
+			</div>)
 	}
 }
 

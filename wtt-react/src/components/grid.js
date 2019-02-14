@@ -16,7 +16,7 @@ export default function Grid(props) {
 		return (
 			<Transition in={props.toggle} timeout={0}>
 				{state => (
-					<div
+					<div id={props.id}
 						style={{
 							...styles,
 							...props.defaultStyles,
@@ -32,6 +32,7 @@ export default function Grid(props) {
 	function staticView() {
 		return (
 			<div
+				id={props.id}
 				style={{
 					...styles
 				}}

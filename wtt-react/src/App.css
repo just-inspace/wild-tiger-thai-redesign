@@ -134,13 +134,10 @@ button {
 	background-position: center;
 }
 
-#callout1,
-#callout2 {
+#homeSection p {
 	font-size: 24px;
 	font-style: italic;
-	max-width: 260px;
-	text-align: left;
-	position: absolute;
+	text-align:left;
 }
 
 #callout1 {
@@ -235,10 +232,4 @@ button {
 .img-left-lg img {
 	width: 229px;
 	height: 229px;
-}
-
-.img-left-lg {
-	position: absolute;
-	bottom: 0px;
-	left: -114px;
 }
