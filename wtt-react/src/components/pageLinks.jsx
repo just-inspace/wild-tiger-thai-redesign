@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class PageLinks extends Component {
 	render() {
-		let classes = this.props.show ? "display " : " ";
+		let classes = this.props.show ? "displayNav " : " ";
 		classes += this.props.mobile ? "mobileNav" : "desktopNav";
 		return (
 			<div id="pagelinks" className={classes}>

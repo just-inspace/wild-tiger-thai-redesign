@@ -3,25 +3,49 @@ import ImageGroup from "./imageGroup";
 
 class ContactSection extends Component {
 	state = {};
-	render() {
+	mobileRender = () => {
 		return (
 			<div id="contactSection">
 				<div className="hours">
 					<p>HOURS</p>
-					<ul id="hoursList">
-						<li>MON-THUR / 11-9</li>
-						<li>FRI / 11-10</li>
-						<li>SAT / 12-10</li>
-					</ul>
+					<p>MON-THUR / 11-9</p>
+					<p>FRI / 11-10</p>
+					<p>SAT / 12-10</p>
 				</div>
 				<ImageGroup start={1} end={4} />
 				<div className="address">
 					<p>1825 SE 164TH AVE</p>
 					<p>SUITE 101</p>
 					<p>VANCOUVER, WA 98683</p>
+					<p>(360) 882-8887</p>
 				</div>
 			</div>
 		);
+	};
+
+	desktopRender = () => {
+		return (
+			<div id="contactSection">
+				<ImageGroup start={0} end={3} side="img-left-lg" />
+				<ImageGroup start={0} end={3} side="img-right-lg" />
+				<div className="hours hoursDesktop">
+					<p>HOURS</p>
+					<p>MON-THUR / 11-9</p>
+					<p>FRI / 11-10</p>
+					<p>SAT / 12-10</p>
+				</div>
+				<div className="address addressDesktop">
+					<p>1825 SE 164TH AVE</p>
+					<p>SUITE 101</p>
+					<p>VANCOUVER, WA 98683</p>
+					<p>(360) 882-8887</p>
+				</div>
+			</div>
+		);
+	};
+
+	render() {
+		return this.props.mobile ? this.mobileRender() : this.desktopRender();
 	}
 }
 

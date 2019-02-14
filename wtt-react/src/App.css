@@ -17,9 +17,13 @@ body {
 }
 
 img {
+	border-radius: 50%;
+}
+
+.contentImages img,
+#menuSection .sideImages img {
 	width: 75px;
 	height: 75px;
-	border-radius: 50%;
 }
 
 button {
@@ -96,7 +100,7 @@ button {
 	align-content: center;
 	align-items: center;
 }
-.display {
+.displayNav {
 	display: flex !important;
 }
 #pagelinks button {
@@ -208,4 +212,33 @@ button {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+}
+
+/**
+  * CONTACT SECTION STYLES
+**/
+#contactSection {
+	font-size: 30px;
+	font-style: italic;
+}
+
+.hours,
+.address {
+	margin: 50px 0;
+}
+.hours p,
+.address p {
+	margin: 5px 0;
+}
+
+.img-right-lg img,
+.img-left-lg img {
+	width: 229px;
+	height: 229px;
+}
+
+.img-left-lg {
+	position: absolute;
+	bottom: 0px;
+	left: -114px;
 }

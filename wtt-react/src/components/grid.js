@@ -1,4 +1,5 @@
 import React from "react";
+import Transition from "react-transition-group/Transition";
 
 export default function Grid(props) {
 	let styles = {
@@ -10,5 +11,34 @@ export default function Grid(props) {
 		justifyContent: props.justifyContent || "auto",
 		alignContent: props.justifyContent ? props.justifyContent : "auto"
 	};
-	return <div style={styles}>{props.children}</div>;
+
+	function animatedView() {
+		return (
+			<Transition in={props.toggle} timeout={0}>
+				{state => (
+					<div
+						style={{
+							...styles,
+							...props.defaultStyles,
+							...props.transitionStyles[state]
+						}}
+					>
+						{props.children}
+					</div>
+				)}
+			</Transition>
+		);
+	}
+	function staticView() {
+		return (
+			<div
+				style={{
+					...styles
+				}}
+			>
+				{props.children}
+			</div>
+		);
+	}
+	return props.animate ? animatedView() : staticView();
 }

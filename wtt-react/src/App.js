@@ -39,12 +39,13 @@ class App extends Component {
 	}
 
 	render() {
+		const { mobile } = this.state;
 		return (
 			<div className="App">
-				<TopBar mobile={this.state.mobile} />
+				<TopBar mobile={mobile} />
 				<HomeSection />
-				<MenuSection />
-				<ContactSection />
+				<MenuSection animate={true} mobile={mobile} />
+				<ContactSection mobile={mobile} />
 			</div>
 		);
 	}

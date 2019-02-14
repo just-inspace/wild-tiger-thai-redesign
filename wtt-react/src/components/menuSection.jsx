@@ -17,22 +17,31 @@ class MenuSection extends Component {
 		toggle: true
 	};
 
-	// handlers
+	// Menu Transition Controls
 	handleClick = e => {
-		if (this.state.activeMenu !== e.target.value) {
-			const menu = e.target.value;
-			setTimeout(() => this.toggleTransition(menu), 250);
-			this.setState({ toggle: false });
+		const menu = e.target.value;
+		if (this.props.animate) {
+			if (this.state.activeMenu !== menu) {
+				setTimeout(() => this.toggleTransition(menu), 250);
+				this.setState({ toggle: false });
+			}
+		} else {
+			this.toggleTransition(menu);
 		}
 	};
 	toggleTransition = menu => {
 		this.setState({ activeMenu: menu, toggle: true });
 	};
 
-	menuRef = React.createRef();
-
 	render() {
-		console.log(this.refs);
+		const defaultStyles = {
+			transition: `opacity 250ms ease-in-out`,
+			opacity: 0
+		};
+		const transitionStyles = {
+			entering: { opacity: 0 },
+			entered: { opacity: 1 }
+		};
 		return (
 			<div id="menuSection">
 				<MenuNav click={this.handleClick} />
@@ -40,12 +49,13 @@ class MenuSection extends Component {
 					columns="100px auto 100px"
 					rows="auto"
 					justifyItems="center"
+					toggle={this.state.toggle}
+					defaultStyles={defaultStyles}
+					transitionStyles={transitionStyles}
+					animate={this.props.animate}
 				>
 					<ImageGroup side="img-left-sm" />
-					<Menu
-						menu={this.state[this.state.activeMenu]}
-						toggle={this.state.toggle}
-					/>
+					<Menu menu={this.state[this.state.activeMenu]} />
 					<ImageGroup side="img-right-sm" />
 				</Grid>
 			</div>
