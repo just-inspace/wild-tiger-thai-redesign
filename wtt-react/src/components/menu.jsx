@@ -5,10 +5,10 @@ class Menu extends Component {
 
 	render() {
 		return (
-			<div id="menu">
+			<div id="menu" style={this.props.additionalStyles}>
 				{Object.values(this.props.menu).map((el, index) => (
-					<React.Fragment key={index}>
-						<h1>{el.heading}</h1>
+					<div key={index}>
+						<h1 className="heading">{el.heading}</h1>
 
 						{el.subheadings &&
 							el.subheadings.map((subhead_el, index) => (
@@ -22,7 +22,7 @@ class Menu extends Component {
 								<p>{sub_el.description}</p>
 							</React.Fragment>
 						))}
-					</React.Fragment>
+					</div>
 				))}
 			</div>
 		);

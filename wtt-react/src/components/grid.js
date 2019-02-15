@@ -9,14 +9,16 @@ export default function Grid(props) {
 		justifyItems: props.justifyItems || "auto",
 		alignItems: props.alignItems || "auto",
 		justifyContent: props.justifyContent || "auto",
-		alignContent: props.justifyContent ? props.justifyContent : "auto"
+		alignContent: props.alignContent ? props.alignContent : "auto",
+		gridAutoFlow: props.gridAutoFlow || "row"
 	};
 
 	function animatedView() {
 		return (
 			<Transition in={props.toggle} timeout={0}>
 				{state => (
-					<div id={props.id}
+					<div
+						id={props.id}
 						style={{
 							...styles,
 							...props.defaultStyles,

@@ -5,6 +5,7 @@ class ImageGroup extends Component {
 	render() {
 		return (
 			<div
+				style={this.props.containerStyles}
 				ref={this.box}
 				className={
 					this.props.side

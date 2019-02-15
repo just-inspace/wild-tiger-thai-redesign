@@ -8,7 +8,9 @@ import noodle2 from "./public/images/noodle2.jpg";
 import wt1 from "./public/images/wt1.jpg";
 import wt2 from "./public/images/wt2.jpg";
 import dessert1 from "./public/images/dessert1.jpg";
+import storeImage from "./public/images/wtt-storefront.png";
 
+export const storeFront = storeImage;
 export const images = [
 	thai1,
 	thai2,
