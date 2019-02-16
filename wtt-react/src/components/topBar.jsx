@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Hamburger from "./hamburger";
 import PageLinks from "./pageLinks";
+import { storeLogo } from "../images";
 
 let scrollToElement = require("scroll-to-element");
 
@@ -25,6 +26,12 @@ class TopBar extends Component {
 	render() {
 		return (
 			<div id="topnav">
+				<img
+					src={storeLogo}
+					alt="Wild Tiger Thai Logo"
+					className="logo"
+				/>
+
 				{this.props.mobile && (
 					<Hamburger click={this.handleResponsiveNavClick} />
 				)}
@@ -41,6 +48,7 @@ class TopBar extends Component {
 						show={true}
 					/>
 				)}
+				<p className="subtitle">Restaurant and Bar</p>
 			</div>
 		);
 	}

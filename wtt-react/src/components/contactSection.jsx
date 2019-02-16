@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import ImageGroup from "./imageGroup";
 import Grid from "./grid";
-import { images, storeFront } from "../images";
+import { storeFront, cropped } from "../images";
 
 class ContactSection extends Component {
 	state = {};
 	mobileRender = () => {
 		return (
-			<Grid columns="100%" rows="auto" id="contactSection">
-				<div className="hours">
+			<Grid columns="auto" rows="auto" id="contactSection">
+				<div className="hours" style={{ alignSelf: "end" }}>
 					<p>HOURS</p>
 					<p>MON-THUR / 11-9</p>
 					<p>FRI / 11-10</p>
@@ -19,10 +19,11 @@ class ContactSection extends Component {
 					end={4}
 					containerStyles={{
 						display: "flex",
-						justifyContent: "space-evenly"
+						justifyContent: "space-evenly",
+						alignItems: "center"
 					}}
 				/>
-				<div className="address">
+				<div className="address" style={{ alignSelf: "start" }}>
 					<p>1825 SE 164TH AVE</p>
 					<p>SUITE 101</p>
 					<p>VANCOUVER, WA 98683</p>
@@ -41,7 +42,7 @@ class ContactSection extends Component {
 				alignItems="center"
 			>
 				<img
-					src={images[0]}
+					src={cropped[0]}
 					alt="food"
 					className="img-left-lg"
 					style={{
@@ -50,7 +51,7 @@ class ContactSection extends Component {
 					}}
 				/>
 				<img
-					src={images[1]}
+					src={cropped[1]}
 					alt="food"
 					className="img-left-lg"
 					style={{
@@ -59,7 +60,7 @@ class ContactSection extends Component {
 					}}
 				/>
 				<img
-					src={images[2]}
+					src={cropped[2]}
 					alt="food"
 					className="img-left-lg"
 					style={{
@@ -80,7 +81,7 @@ class ContactSection extends Component {
 					<p>(360) 882-8887</p>
 				</div>
 				<img
-					src={images[0]}
+					src={cropped[0]}
 					alt="food"
 					className="img-right-lg"
 					style={{
@@ -90,7 +91,7 @@ class ContactSection extends Component {
 					}}
 				/>
 				<img
-					src={images[1]}
+					src={cropped[1]}
 					alt="food"
 					className="img-right-lg"
 					style={{
@@ -100,7 +101,7 @@ class ContactSection extends Component {
 					}}
 				/>
 				<img
-					src={images[2]}
+					src={cropped[2]}
 					alt="food"
 					className="img-right-lg"
 					style={{

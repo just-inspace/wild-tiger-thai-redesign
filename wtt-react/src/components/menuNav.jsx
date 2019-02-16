@@ -5,10 +5,18 @@ class MenuNav extends Component {
 	render() {
 		const { click } = this.props;
 		return (
-			<div id="menuButtons">
+			<div
+				id="menuButtons"
+				className={
+					this.props.mobile
+						? "mobileMenuButtons"
+						: "desktopMenuButtons"
+				}
+			>
 				<button className="menuButton" value="foodMenu" onClick={click}>
 					Food
 				</button>
+				{this.props.mobile ? "" : <div className="menuSeparator" />}
 				<button
 					className="menuButton"
 					value="happyHourMenu"
@@ -16,6 +24,7 @@ class MenuNav extends Component {
 				>
 					Happy Hour
 				</button>
+				{this.props.mobile ? "" : <div className="menuSeparator" />}
 				<button
 					className="menuButton"
 					value="drinksMenu"

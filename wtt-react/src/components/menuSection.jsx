@@ -36,7 +36,7 @@ class MenuSection extends Component {
 	renderMobile = (defaultStyles, transitionStyles) => {
 		return (
 			<div id="menuSection">
-				<MenuNav click={this.handleClick} />
+				<MenuNav click={this.handleClick} mobile={this.props.mobile} />
 				<Grid
 					columns="100px auto 100px"
 					rows="auto"
@@ -58,7 +58,7 @@ class MenuSection extends Component {
 		const half = Math.floor(this.state[this.state.activeMenu].length / 2);
 		return (
 			<div id="menuSection">
-				<MenuNav click={this.handleClick} />
+				<MenuNav click={this.handleClick} mobile={this.props.mobile} />
 				<Grid
 					columns="100px 1fr 1fr 100px"
 					rows="auto"

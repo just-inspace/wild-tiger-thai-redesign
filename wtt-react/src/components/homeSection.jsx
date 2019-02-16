@@ -7,7 +7,7 @@ class HomeSection extends Component {
 	mobileRender = () => {
 		return (
 			<Grid
-				alignItems="end"
+				alignItems="center"
 				columns="100%"
 				rows="40% 40%"
 				id="homeSection"

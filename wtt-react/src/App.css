@@ -77,9 +77,38 @@ button {
 #topnav {
 	position: fixed;
 	height: 60px;
-	width: 100%;
+	width: 100vw;
 	background-color: #97ba27;
 	z-index: 9999;
+	text-align: left;
+}
+
+@media only screen and (min-width: 961px) {
+	.logo {
+		max-height: 60px;
+		float: left;
+	}
+
+	.subtitle {
+		color: #02020b;
+		font-family: flood-std, sans-serif;
+		font-size: 25px;
+		line-height: 74px;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	.logo {
+		max-height: 35px;
+		float: left;
+	}
+	.subtitle {
+		color: #02020b;
+		font-family: flood-std, sans-serif;
+		font-size: 18px;
+		clear: left;
+		margin-left: 5px;
+	}
 }
 
 #menuSVG {
@@ -101,17 +130,16 @@ button {
 	align-content: center;
 	align-items: center;
 }
-.desktopNav {
-	display: flex;
-	width: 50%;
-	margin-left: 50%;
-	justify-content: right;
-	align-content: center;
-	align-items: center;
-}
+
 .displayNav {
 	display: flex !important;
 }
+
+.desktopNav {
+	float: right;
+	margin-right: 5%;
+}
+
 #pagelinks button {
 	background-color: #97ba27;
 	color: #02020b;
@@ -120,6 +148,7 @@ button {
 	line-height: 25px;
 	width: 100%;
 	align-self: stretch;
+	padding: 0 20px;
 }
 #pagelinks button:hover {
 	cursor: pointer;
@@ -154,6 +183,7 @@ button {
 	background-color: rgba(2, 2, 11, 0.3);
 	border-top-right-radius: 10px;
 	border-bottom-left-radius: 10px;
+	max-width: 213px;
 }
 
 #contactSection {
@@ -168,23 +198,49 @@ button {
 }
 
 #menuButtons {
-	background-color: #3c4747;
 	color: #e55811;
 	display: flex;
 	width: 100%;
 	height: 71px;
-	align-content: stretch;
-	justify-content: space-evenly;
+	align-content: center;
 }
 
 .menuButton {
-	width: 100%;
+	background-color: #3c4747;
 	font-size: 24px;
 	font-weight: bold;
 	line-height: 24px;
 }
+
 .menuButton:hover {
 	cursor: pointer;
+}
+
+.menuSeparator {
+	height: 80px;
+	border: 3px solid #9a1e04;
+	margin: auto 0;
+	position: relative;
+	top: -6px;
+}
+
+.desktopMenuButtons {
+	border-radius: 5px;
+	justify-content: center;
+}
+
+.desktopMenuButtons .menuButton {
+	margin: 0 20px;
+	min-width: 150px;
+}
+
+.mobileMenuButtons {
+	border-radius: 0px;
+	justify-content: space-evenly;
+}
+
+.mobileMenuButtons .menuButton {
+	width: 100%;
 }
 
 #menu h1 {
@@ -228,14 +284,16 @@ button {
   * CONTACT SECTION STYLES
 **/
 #contactSection {
-	font-size: 30px;
+	font-size: 25px;
 	font-style: italic;
+	font-family: flood-std;
 }
 
 .hours,
 .address {
-	margin: 50px 0;
+	margin-top: 15px;
 }
+
 .hours p,
 .address p {
 	margin: 5px 0;
@@ -243,16 +301,20 @@ button {
 
 .img-right-lg,
 .img-left-lg {
-	width: 230px;
+	width: 115px;
 	height: 230px;
 }
 
 .img-left-lg {
 	justify-self: left;
-	transform: translateX(-125px);
+	border-radius: 0;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
 }
 
 .img-right-lg {
 	justify-self: right;
-	transform: translateX(125px);
+	border-radius: 0;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
 }
