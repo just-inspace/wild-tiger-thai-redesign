@@ -8,6 +8,33 @@ import foodMenu from "./data/foodMenu.json";
 import drinksMenu from "./data/drinksMenu.json";
 import happyHourMenu from "./data/happyHourMenu.json";
 
+/**
+ * @class MenuSection
+ * @extends {Component}
+ *
+ * COMPONENT PURPOSE:
+ * 	Render the MENU SECTION
+ *
+ * STATE:
+ * 	foodMenu: Food Menu JSON Data
+ * 	drinksMenu: Drinks Menu JSON Data
+ * 	happyHourMenu: Happy Hour Menu JSON Data
+ * 	activeMenu: The currently visible menu
+ * 	toggle: used during transition to determine if a transition animation is running
+ *
+ * HANDLERS:
+ * 	handleClick => responds to a click event on the menu buttons
+ * 	toggleTransition => change the active menu and make it visible
+ *
+ * ADDITIONAL FUNCTIONS:
+ * 	renderMobile => return the rendering for mobile view
+ *  renderDesktop => return the rendering for desktop view
+ *
+ * CHILD COMPONENTS:
+ * 	MenuNav
+ * 	Grid
+ * 	ImageGroup
+ */
 class MenuSection extends Component {
 	state = {
 		foodMenu: foodMenu,
@@ -17,7 +44,6 @@ class MenuSection extends Component {
 		toggle: true
 	};
 
-	// Menu Transition Controls
 	handleClick = e => {
 		const menu = e.target.value;
 		if (this.props.animate) {

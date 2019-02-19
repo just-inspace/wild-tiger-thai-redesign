@@ -1,31 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 import { images } from "../images";
 
-class ImageGroup extends Component {
-	render() {
-		return (
-			<div
-				style={this.props.containerStyles}
-				ref={this.box}
-				className={
-					this.props.side
-						? this.props.side + " sideImages"
-						: "contentImages"
-				}
-			>
-				{images
-					.slice(this.props.start, this.props.end)
-					.map((image, index) => (
-						<img
-							key={index}
-							src={image}
-							alt={"food-image-" + index}
-							className={"image"}
-						/>
-					))}
-			</div>
-		);
-	}
+/**
+ * @export
+ * @returns a container for a group of images plus a slice of the images imported to the app
+ */
+export default function ImageGroup(props) {
+	return (
+		<div
+			style={props.containerStyles}
+			className={
+				props.side ? props.side + " sideImages" : "contentImages"
+			}
+		>
+			{images.slice(props.start, props.end).map((image, index) => (
+				<img
+					key={index}
+					src={image}
+					alt={"food-image-" + index}
+					className={"image"}
+				/>
+			))}
+		</div>
+	);
 }
-
-export default ImageGroup;

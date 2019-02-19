@@ -72,7 +72,7 @@ button {
 }
 
 /**
-  * NAVIGATION SECTION
+  * TOP BAR SECTION
 **/
 #topnav {
 	position: fixed;
@@ -82,11 +82,17 @@ button {
 	z-index: 9999;
 	text-align: left;
 }
-
+/**
+  * subsection -  COMPANY NAME
+**/
 @media only screen and (min-width: 961px) {
+	.companyName {
+		flex-direction: row;
+		max-height: 60px;
+	}
+
 	.logo {
 		max-height: 60px;
-		float: left;
 	}
 
 	.subtitle {
@@ -98,19 +104,26 @@ button {
 }
 
 @media only screen and (max-width: 960px) {
-	.logo {
-		max-height: 35px;
-		float: left;
+	.companyName {
+		flex-direction: column;
+		max-height: 60px;
 	}
+
+	.logo {
+		max-height: 40px;
+	}
+
 	.subtitle {
 		color: #02020b;
 		font-family: flood-std, sans-serif;
 		font-size: 18px;
-		clear: left;
 		margin-left: 5px;
 	}
 }
 
+/**
+  * subsection - NAVIGATION MENU
+**/
 #menuSVG {
 	position: fixed;
 	top: 12px;
@@ -154,6 +167,10 @@ button {
 	cursor: pointer;
 }
 
+/**
+  * DEFAULT STYLING FOR ALL SECTIONS
+  * clearing the navigation bar with padding
+**/
 #homeSection,
 #contactSection,
 #menuSection {
@@ -192,6 +209,10 @@ button {
 
 /**
   * MENU GRID AND CONTENT SECTION
+  * full section
+  * buttons
+  * menu appearance
+  * menu images
 **/
 #menuSection {
 	min-height: 100vh;

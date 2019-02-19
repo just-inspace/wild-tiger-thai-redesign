@@ -2,6 +2,20 @@ import React, { Component } from "react";
 import Grid from "./grid";
 import { storeFront } from "../images";
 
+/**
+ * @class HomeSection
+ * @extends {Component}
+ *
+ * COMPONENT PURPOSE:
+ * 	Render the HOME SECTION
+ *
+ * ADDITIONAL FUNCTIONS:
+ * 	mobileRender => return the rendering for mobile view
+ * 	desktopRender => return the rendering for desktop view
+ *
+ * CHILD COMPONENTS:
+ * 	Grid
+ */
 class HomeSection extends Component {
 	state = {};
 	mobileRender = () => {

@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 
+/**
+ * @class PageLinks
+ * @extends {Component}
+ *
+ * COMPONENT PURPOSE:
+ * 	Construct / control the top level page navigation
+ */
 class PageLinks extends Component {
 	render() {
 		let classes = this.props.show ? "displayNav " : " ";

@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * @export
+ * @param {*} props
+ * @returns JSX Element (hamburger menu svg)
+ */
 export default function Hamburger(props) {
 	return (
 		<svg

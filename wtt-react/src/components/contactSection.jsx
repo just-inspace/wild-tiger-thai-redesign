@@ -3,6 +3,20 @@ import ImageGroup from "./imageGroup";
 import Grid from "./grid";
 import { storeFront, cropped } from "../images";
 
+/**
+ * @class ContactSection
+ * @extends {Component}
+ *
+ * COMPONENT PURPOSE:
+ * 	Render the CONTACT SECTION
+ *
+ * ADDITIONALY FUNCTIONS:
+ * 	mobileRender
+ *
+ * CHILD COMPONENTS:
+ * 	ImageGroup
+ * 	Grid
+ */
 class ContactSection extends Component {
 	state = {};
 	mobileRender = () => {

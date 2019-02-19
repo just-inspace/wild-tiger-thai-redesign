@@ -3,8 +3,27 @@ import Hamburger from "./hamburger";
 import PageLinks from "./pageLinks";
 import { storeLogo } from "../images";
 
+// Scroll To Element package. Enable smooth scrolling between page sections
 let scrollToElement = require("scroll-to-element");
 
+/**
+ * @class TopBar
+ * @extends {Component}
+ *
+ * COMPONENT PURPOSE:
+ * 	Display the fixed page header, business name, and navigation controls
+ *
+ * STATE:
+ * 	show: controls visibility of mobile menu
+ *
+ * HANDLERS:
+ * 	handleResponsiveNavClick => adjust state {show} when hamburger menu is clicked
+ * 	handleNavigation => menu button clicked. call the scrollToElement function to scroll page
+ *
+ * CHILD COMPONENTS:
+ * 	Hamburger
+ * 	PageLinks
+ */
 class TopBar extends Component {
 	state = {
 		show: false
@@ -26,12 +45,17 @@ class TopBar extends Component {
 	render() {
 		return (
 			<div id="topnav">
-				<img
-					src={storeLogo}
-					alt="Wild Tiger Thai Logo"
-					className="logo"
-				/>
-
+				<div
+					style={{ display: "flex", float: "left" }}
+					className="companyName"
+				>
+					<img
+						className="logo"
+						src={storeLogo}
+						alt="Wild Tiger Thai Logo"
+					/>
+					<p className="subtitle">Restaurant and Bar</p>
+				</div>
 				{this.props.mobile && (
 					<Hamburger click={this.handleResponsiveNavClick} />
 				)}
@@ -48,7 +72,6 @@ class TopBar extends Component {
 						show={true}
 					/>
 				)}
-				<p className="subtitle">Restaurant and Bar</p>
 			</div>
 		);
 	}
